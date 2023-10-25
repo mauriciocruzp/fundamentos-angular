@@ -1,0 +1,14 @@
+<div class="error" *ngIf="isError">
+    Mensaje de error: algo salió mal :c
+</div>
+
+<button (click)="showError()">Mostrar error</button>
+
+<ul>
+    <li *ngFor="let section of sections">{{section.name}} ({{section.duration}})</li>
+</ul>
+
+
+<ng-template #noContent>Contenido no disponible</ng-template>
+
+<ng-container *ngTemplateOutlet="isError ? noContent : null"></ng-container>

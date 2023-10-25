@@ -1,0 +1,12 @@
+{{name | titlecase}}
+
+<div>
+    Fecha: {{currentDate | date: 'long'}}
+</div>
+
+<div>
+    Estado: {{state | estados}}
+</div>
+
+<button (click)="changeState()">Cambiar estado</button>
+

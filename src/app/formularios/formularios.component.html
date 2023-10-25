@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+  <div>
+    <input type="text" placeholder="Nombre" formControlName="name" />
+    <pre>
+      <code>
+          {{ form.get('name')?.value | json }}
+      </code>
+    </pre>
+  </div>
+
+  <div>
+    <input type="checkbox" placeholder="Check" formControlName="isChecked" />
+    {{ form.get('isChecked')?.value }}
+  </div>
+
+  <button [disabled]="form.get('name')?.errors">Enviar</button>
+  <pre>
+    <code>
+        {{ form.value | json }}
+    </code>
+  </pre>
+</form>

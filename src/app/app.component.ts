@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'fundamentos-angular';
+  title = 'curso-angular';
+
+  constructor() {
+    localStorage.setItem('userId', '1234');
+  }
 }
